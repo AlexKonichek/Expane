@@ -1,7 +1,9 @@
 import React from 'react';
+import UserForm from '../../components/User-Form';
 
 
 const AddNewUser = () => {
-  <div></div>
+  return (<UserForm user={{}}/>)
+  
 }
 export default AddNewUser
