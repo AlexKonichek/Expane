@@ -4,28 +4,29 @@ import Navbar from './components/Navbar';
 import HomeScreen from './screens/HomeScreen';
 import AddUserScreen from './screens/AddNewUserScreen';
 import EditUserScreen from './screens/EditUserScreen';
+import { QueryClient, QueryClientProvider } from 'react-query'
 
+const queryClient = new QueryClient()
 
 function App() {
   return (
-      <Router>
-        <Navbar/>
-        
-      <Switch>
-          <Route exact path="/">
-            <HomeScreen />
-          </Route>
-          <Route path="/add">
-            <AddUserScreen />
-          </Route>
-          <Route path="/edit/:id">
-            <EditUserScreen />
-          </Route>
-      </Switch>
+    <QueryClientProvider client={queryClient}>
+    <Router>
+      <Navbar/>
+        <Switch>
+            <Route exact path="/">
+              <HomeScreen />
+            </Route>
+            <Route path="/add">
+              <AddUserScreen />
+            </Route>
+            <Route path="/edit/:id">
+              <EditUserScreen />
+            </Route>
+        </Switch>
       </Router>
-    
+    </QueryClientProvider>
   )
-  
   }
 
 export default App;
