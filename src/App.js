@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Navbar from './components/Navbar';
-import HomeScreen from './Screens/HomeScreen';
-import AddUserScreen from './Screens/AddNewUserScreen';
-import EditUserScreen from './Screens/EditUserScreen';
+import HomeScreen from './screens/HomeScreen';
+import AddUserScreen from './screens/AddNewUserScreen';
+import EditUserScreen from './screens/EditUserScreen';
 
 
 function App() {
