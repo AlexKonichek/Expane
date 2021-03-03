@@ -66,7 +66,7 @@ const UserForm = (props) => {
     }
     
 const res = await graphQLClient.request(mutation,variables)
-console.log(JSON.stringify(res, undefined, 2))
+alert(JSON.stringify(res, undefined, 2))
   };
 
     return (
